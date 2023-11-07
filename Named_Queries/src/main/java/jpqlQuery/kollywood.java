@@ -5,7 +5,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 
-@NamedQueries({ @NamedQuery(name = "IdentifyByName", query = "from kollywood k where k.ActorName=:ActorName") })
+@NamedQueries({ 
+	@NamedQuery(
+			name = "IdentifyById", 
+			query = "from kollywood k where k.ActorId=:ActorId"
+			),
+	@NamedQuery(
+	        name = "AnotherNQ",
+	        query = "SELECT k1 FROM kollywood k1 WHERE k1.ActorId =:ActorId"
+	    )
+	})
 @Entity
 public class kollywood {
 	@Id
