@@ -37,6 +37,7 @@ public class NQ_main {
 
 			kollywood k = iter2.next();
 			System.out.println(k);
+
 			while (iter.hasNext()) {
 
 				kollywood k1 = iter.next();
